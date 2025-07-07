@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply font-grotesk;
+}
+@media print {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  #printable-area {
+    page-break-after: avoid; /* evita quebra logo após */
+    page-break-before: avoid; /* evita quebra antes */
+    page-break-inside: avoid; /* evita quebra dentro */
+    break-inside: avoid;
+    margin: 0 !important;
+    padding: 3;
+  }
+
+  /* Esconde tudo que não deve aparecer na impressão */
+  .no-print {
+    display: none !important;
+  }
+}
